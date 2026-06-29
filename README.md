@@ -111,3 +111,28 @@ Generates a professional email from brief notes.
     "email": "Dear Team,\n\n..."
   }
   ```
+
+
+
+
+## Live Deployment
+
+**API URL:** https://ir-infotech-rest-api.onrender.com
+
+### Test the API:
+- Swagger UI: https://ir-infotech-rest-api.onrender.com/docs
+- ReDoc: https://ir-infotech-rest-api.onrender.com/redoc
+
+### Example Requests:
+```bash
+curl -X POST "https://ir-infotech-rest-api.onrender.com/summarize" \
+  -H "Content-Type: application/json" \
+  -d '{"text":"Artificial intelligence is transforming technology"}'
+
+curl -X POST "https://ir-infotech-rest-api.onrender.com/translate" \
+  -H "Content-Type: application/json" \
+  -d '{"text":"Hello world"}'
+
+curl -X POST "https://ir-infotech-rest-api.onrender.com/generate-email" \
+  -H "Content-Type: application/json" \
+  -d '{"text":"Project deadline extended to next week"}'
