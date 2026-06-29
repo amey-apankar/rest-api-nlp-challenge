@@ -26,6 +26,10 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="IR Infotech REST API Challenge", lifespan=lifespan)
 
+@app.get("/")
+async def root():
+    return {"message": "Welcome to the IR Infotech REST API Challenge", "docs": "/docs"}
+
 @app.middleware("http")
 async def log_requests(request: Request, call_next):
     start_time = time.time()
